@@ -1,0 +1,18 @@
+.search{
+  input[type='text']{
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 2px 3px RGBa(0,0,0,0.12);
+    width: 230px;
+    color: #282828;
+    font-size: 16px;
+  }
+  input[type='text']::placeholder {
+    color: $placeholder-color;
+  }
+  div {
+    display:inline-block;
+    width: 50%;
+  }
+}

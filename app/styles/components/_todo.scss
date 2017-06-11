@@ -1,0 +1,29 @@
+.todo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.3s ease;
+
+  p, input {
+    margin: 0;
+  }
+
+  > :first-child {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.todo-completed {
+  p, input {
+    text-decoration: line-through;
+  }
+}
+
+.todo-time {
+  color: #ababab;
+}
