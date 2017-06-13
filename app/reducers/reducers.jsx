@@ -34,7 +34,7 @@ export var todosReducer = (state = [], action) => {
       ];
     case 'ADD_TODOS':
       return [
-        ...state.todos,
+        ...state,
         ...action.todos
       ];
     case 'TOGGLE_TODO':
