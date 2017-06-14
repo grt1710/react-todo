@@ -11,6 +11,23 @@ var config = {
 firebase.initializeApp(config);
 
 
-firebase.database().ref().set({
-  appName: 'Ravis Todo App'
+var firebaseRef = firebase.database().ref();
+
+firebaseRef.set({
+  app: {
+    name: 'Rad Todo App',
+    version: 1.12
+  },
+  isRunning: true,
+  user: {
+    name: 'Ravi',
+    age: 26
+  }
 });
+
+firebaseRef.on('value', (snapshot) => {
+  console.log('got user data',snapshot.val());
+});
+
+firebaseRef.child('user').update({ name: 'Make'});
+firebaseRef.child('app').update({name: 'something else'});
